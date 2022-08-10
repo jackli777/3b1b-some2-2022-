@@ -272,7 +272,7 @@ U_value = torch.rand(d_v, d)
 
 - Generally speaking, d_q, d_k, and d_v can be set consistently with the dimension of the word embedding, d. Although this is not a strict requirement, **d_q and d_k must be the same** (keeping only d_k later on), and **d_v can be different from d_k**. To see the dimension information of each tensor more clearly later on, here d_k is set to d+1 and d_v to d+2.
 
-- Let's look at the dimension information of each **mapping matrix** generated from the settings:
+- Let's look at the dimension information of each **mapping matrix** generated from the configurations:
 
 ```python
 print(U_query.size())
@@ -656,7 +656,7 @@ torch.Size([8, 18])
 
 - Different from the previous schematic diagrams or simple 2D pictures, all the scenes in the above 3D interactive website, and the colors in each small cube are generated through strict code rules, and are strictly in accordance with the implementation of Transformer architecture, and can be regarded as a **3D interactive implementation** of the attention mechanism computation process in Transformer.
 
-- The setting of multiple scenes will help readers to make a **horizontal comparison** of the above computation process, so as to generate new insights for further in-depth studies. Here are a few examples:
+- The seperation of multiple scenes will help readers to make a **horizontal comparison** of the above computation process, so as to generate new insights for further in-depth studies. Here are a few examples:
   - Comparing the resulting **$\omega$ matrix / tensor**: the 3rd, 10th, 17th scenes
   - Comparing the resulting **attention weight matrix / tensor**: the 4th, 11th, 18th scenes
   - Comparing the resulting **context vector matrix / tensor**: the 5th, 12th, 19th scenes
