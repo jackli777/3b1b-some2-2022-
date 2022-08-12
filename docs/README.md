@@ -39,7 +39,7 @@
 
 
 > #### Introduction
-- **Transformer** (Vaswani, A. et al. 2017) has swept all corners of the AI ​​fields since it was proposed in 2017, from the original natural language processing (**NLP**) (original Transformer (Vaswani, A. et al. 2017), **ELMo** series (Matthew E. . et al. 2018), **GPT** series (Brown, T. et al. 2020), **BERT** series (Devlin, J. et al. 2018)) to image and video understanding (**ViT** (Dosovitskiy, A. et al. 2020) ), to biological sequence analysis (Rives, A. et al. 2021, Nambiar, A. et al. 2020, Rao, R. et al. 2019), to protein structure prediction (last year’s great breakthrough in scientific researches published on **Nature**, **AlphaFold2** (Jumper, J. et al. 2021)) and so on. **Transformer is now everywhere.** The original paper (**Attention is all you need**) has reached the number of citations in Google Scholar an astonishing 48,914 times (2022-08-09 at the time of writing V1.0 of this blog)!
+- **Transformer** (Vaswani, A. et al. 2017) has swept all corners of the AI ​​fields since it was proposed in 2017, from the original natural language processing (**NLP**) (original Transformer (Vaswani, A. et al. 2017), **ELMo** series (Matthew E. . et al. 2018), **GPT** series (Brown, T. et al. 2020), **BERT** series (Devlin, J. et al. 2018)) to image and video understanding (**ViT** (Dosovitskiy, A. et al. 2020) ), to biological sequence analysis (Rives, A. et al. 2021, Nambiar, A. et al. 2020, Rao, R. et al. 2019), to protein structure prediction (**AlphaFold2** (Jumper, J. et al. 2021) published on **Nature**, also the last year’s great breakthrough in scientific researches, [**2021 BREAKTHROUGH OF THE YEAR**](https://www.science.org/content/article/breakthrough-2021)) and so on. **Transformer is now everywhere.** The original paper (**Attention is all you need**) has reached the number of citations in Google Scholar an astonishing 48,914 times (2022-08-09 at the time of writing V1.0 of this blog)!
 
 ![transformer_citation_counts](pics/transformer_citation_counts.png)
 
@@ -682,6 +682,7 @@ torch.Size([8, 18])
 - Rao, R., Bhattacharya, N., Thomas, N., Duan, Y., Chen, P., Canny, J., Abbeel, P. and Song, Y., 2019. Evaluating protein transfer learning with TAPE. Advances in neural information processing systems, 32.
 - Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tunyasuvunakool, K., Bates, R., Žídek, A., Potapenko, A. and Bridgland, A., 2021. Highly accurate protein structure prediction with AlphaFold. Nature, 596(7873), pp.583-589.
 - Sebastian Raschka, Yuxi (Hayden) Liu, Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Birmingham, UK: Packt Publishing, 2022. ISBN: 978-1801819312
+- Robert F. Service (2021) 2021 BREAKTHROUGH OF THE YEAR Protein structures for all AI-powered predictions show proteins finding their shapes [Blog post]. Retrieved from https://www.science.org/content/article/breakthrough-2021
 - Alammar, J (2018). The Illustrated Transformer [Blog post]. Retrieved from https://jalammar.github.io/illustrated-transformer/
 - Huang, A., Subramanian, S., Sum, J., Almubarak, K., and Biderman, Stella. (2022). The Annotated Transformer [Blog post]. Retrieved from http://nlp.seas.harvard.edu/annotated-transformer/
 - Rush, A. (2018). The Annotated Transformer [Blog post]. Retrieved from http://nlp.seas.harvard.edu/2018/04/03/attention.html
