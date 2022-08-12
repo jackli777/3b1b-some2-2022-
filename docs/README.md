@@ -8,6 +8,7 @@
 
 > #### Version Info
 - V1.0 2022-08-09 work submitted to **3Blue1Brown**'s **Summer of Math Exposition 2**
+- V1.1 2022-08-12 change the heat map gradient to 🌈colormap gradient ranging from <strong><font color="#7F00FF">purple</font></strong> to <font color="#FF0000">red</font></strong>, and update the accompanying **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** correspondingly, and all the pngs, gifs in this blog.
 
 > #### Notes
 
@@ -20,7 +21,7 @@
 - The interactions supported by the **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** accompanying this blog include **panning**, **zooming**, and **rotation** of the view. The content includes the computation process of the **self-attention mechanism**, the **scaled dot product attention mechanism** and the **multi-head attention mechanism**. It is divided into **21 scenes**, which can be freely switched by the reader.
 
 - The following is a brief introduction to the use and operation of the **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** (the specific meaning of its content will be explained in detail later on): 
-  - You will see a blank scene when you visit the website for the first time. The upper right corner is the **control panel**, which can be **opened/closed** by yourself. The control panel includes **adding/deleting the light source**, **adding/deleting grid lines**, **adding/deleting axes**, **adding/deleting shadows**, and **scene switching drop-down menu**. The upper left corner is the **frame rate information** of the current page.
+  - You will be directed to the **1st scene** by default when you visit the website for the first time. The upper right corner is the **control panel**, which can be **opened/closed** by yourself. The control panel includes **adding/deleting the light source**, **adding/deleting grid lines**, **adding/deleting axes**, **adding/deleting shadows**, and **scene switching drop-down menu**. The upper left corner is the **frame rate information** of the current page.
 
   ![note_first_sight](pics/note_first_sight.gif)
 
@@ -103,7 +104,7 @@ tensor([0, 7, 1, 2, 5, 6, 4, 3])
 
 ![scene_1](pics/scene_1.png)
 
-- The different colors of each small cube in all scenes represent different **numerical values**. The **relative relationship** between them can be seen from the heat map gradient on the right, that is, the closer to the red end, the larger the value, and the closer to the blue end, the smaller the value.
+- The different colors of each small cube in all scenes represent different **numerical values**. The **relative relationship** between them can be seen from the 🌈colormap gradient on the right, that is to say, the closer to the <strong><font color="#FF0000">red</font></strong> end, the larger the value, and the closer to the <strong><font color="#7F00FF">purple</font></strong> end, the smaller the value.
 
 - In the **1st scene**, the different colors of the cubes represent the **index** of each word in the dictionary.
 
