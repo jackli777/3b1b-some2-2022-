@@ -14,7 +14,7 @@
 
 - This blog is an entry to the **Summer of Math Exposition 2**, hereinafter referred to as **SoME2** ([YouTube](https://www.youtube.com/watch?v=hZuYICAEN9Y), [Bilibili](https://www.bilibili.com/video/BV1fZ4y1a7zZ)), which is an event organized by **3Blue1Brown**, hereinafter referred to as **3b1b** ([YouTube](https://www.youtube.com/c/3blue1brown), [Bilibili](https://space.bilibili.com/88461692)).
 
-- This blog is more suitable for readers with a certain **linear algebra** and **deep learning** foundation, but because the presentation of this blog combines **3D visual interaction**, I believe it is more intuitive than the traditional text + picture manner, and it is easier to be consumed by the general public. If you want to understand the basics of **linear algebra** and **deep learning**, here is a series of animated video courses launched by the organizer **3b1b**: **linear algebra** ([YouTube](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), [Bilibili](https://space.bilibili.com/88461692/channel/seriesdetail?sid=1528927)), **deep learning** ([YouTube](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi), [Bilibili](https://space.bilibili.com/88461692/channel/seriesdetail?sid=1528929)). I became a loyal fan of **3b1b** after watching the series of animation videos produced by **3b1b** (╯°□°)╯.
+- This blog may be better digested by readers with a certain **linear algebra** and **deep learning** foundation, but since the presentation of this blog combines **3D visual interaction**, I believe it is more intuitive than the traditional text + picture manner, and it is easier to be consumed by the general public. If you want to understand the basics of **linear algebra** and **deep learning**, here is a series of animation video courses launched by the organizer **3b1b**: **linear algebra** ([YouTube](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), [Bilibili](https://space.bilibili.com/88461692/channel/seriesdetail?sid=1528927)), **deep learning** ([YouTube](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi), [Bilibili](https://space.bilibili.com/88461692/channel/seriesdetail?sid=1528929)). I became a loyal fan of **3b1b** after watching the animation video series produced by **3b1b** (╯°□°)╯.
 
 - This blog and the supporting **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** are based on the jupyter notebook ([ch16-part1-self-attention.ipynb](https://github.com/rasbt/machine-learning-book/blob/main/ch16/ch16-part1-self-attention.ipynb)) published by **Prof. Sebastian Raschka** ([personal homepage](https://sebastianraschka.com/), [GitHub homepage](https://github.com/rasbt)), combined with my understanding, addition, modification, and creation. This notebook is also one of the accompanying notebooks for Chapter 16 of the book **Machine Learning with PyTorch and Scikit-Learn** authored by **Prof. Sebastian Raschka**, and interested readers can also purchase it for further reference. **Prof. Sebastian Raschka** has also launched a video course series including the **self-attention mechanism** and **Transformer architecture** ([L19.4.2 Self-Attention and Scaled Dot-Product Attention](https://www.youtube.com/watch?v=0PjHri8tc1c&list=PLTKMiZHVd_2KJtIXOW0zFhFfBaJJilH51&index=161), [L19.4.3 Multi-Head Attention](https://www.youtube.com/watch?v=A1eUVxscNq8&list=PLTKMiZHVd_2KJtIXOW0zFhFfBaJJilH51&index=162), and [L19.5.1 The Transformer Architecture](https://www.youtube.com/watch?v=tstbZXNCfLY&list=PLTKMiZHVd_2KJtIXOW0zFhFfBaJJilH51&index=163)) for your reference.
 
@@ -46,21 +46,21 @@
 
 - "...if now going to the machine learning the part that's surprising is... so we like architectures like neural networks, and I would say this was a very rapidly evolving field until the **Transformer** came, so **attention might indeed be all you need** which is the title, also a good title although in hindsight is good I don't think at the time I thought this is a great title for a paper, but that architecture is proving that the dream of modeling sequences of any bytes, there is something there that will stick, and I think these advances in architectures, in kind of how neural networks and architectures to do what they do, um it's been hard to find one that has been so **stable** and relatively has **changed very little** since it was invented five or so years ago, so that is a **surprise** that keeps recurring into all the projects..." —— quotes from **Oriol Vinyals**, the Research Director and Deep Learning Lead at DeepMind, [Oriol Vinyals: Deep Learning and Artificial General Intelligence | Lex Fridman Podcast #306](https://www.youtube.com/watch?v=aGBLRlLe7X8)
 
-- Today, with the rapid development and brilliance of AI technology, I think it is necessary to have a clear and in-depth understanding of Transformer. Whether you are a scholar, practitioner in the field of AI, or one of the general public, I believe that by reading this blog and exploring the supporting **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** personally, you will nevertheless gain something. To tell the truth, it is through making the above 3D interactive website and writing this blog, that I have a clearer understanding of Transformer myself!
+- Today, with the rapid development and brilliance of AI technology, I think it is necessary to have a clear and in-depth understanding of Transformer. Whether you are a scholar or a practitioner in the field of AI, or one of the general public, I believe that by reading this blog and exploring the supporting **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** personally, you will nevertheless gain something. To tell the truth, it is through making the above 3D interactive website and writing this blog, that I have a clearer understanding of Transformer myself!
 
 - This blog focuses on the core computation process of Transformer (in **deep learning terms**, it is part of a **forward propagation** process in either the **encoder** or **decoder** in the **Transformer architecture**): **self-attention mechanism**, **scaled dot product attention mechanism**, and **multi-head attention mechanism** are introduced in detail. The implementation of Transformer is based on the refinement and simplification of the original paper by **Prof. Sebastian Raschka** ([personal homepage](https://sebastianraschka.com/), [GitHub homepage](https://github.com/rasbt)). You can refer to his published jupyter notebook ([ch16-part1-self-attention.ipynb](https://github.com/rasbt/machine-learning-book/blob/main/ch16/ch16-part1-self-attention.ipynb)). Based on my understanding, addition, and modification, I created the above-mentioned 3D interactive website and this blog.
 
 
 > #### Motivation
-- Since Transformer became popular, there have been a lot of academic papers, blogs, videos, etc., to extend and explain Transformer from all angles and aspects. Just like Transformer's original paper, the same popular contents are as follows:
+- Since Transformer became popular, there have been a lot of research papers, blogs, videos, etc., to extend and explain Transformer from all angles and aspects. Just like Transformer's original paper, the same popular contents are as follows:
   - BERT (Devlin, J. et al. 2018), another milestone research achievement in the NLP field based on Transformer, has an astonishing 45,791 citations in Google Scholar, which is close to the original text of Transformer (upon this blog V1.0 2022-08-09)!
   - The Annotated Transformer ([new version](http://nlp.seas.harvard.edu/annotated-transformer/), [old version](http://nlp.seas.harvard.edu/2018/04/03/attention.html)) implements the original Transformer paper through PyTorch and supplements it with 2D pictures and tables.
   - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) explains the original paper through a large number of cartoon drawings, and the author [Jay Alammar](https://jalammar.github.io/) himself has a corresponding [video explanation](https://youtu.be/-QH8fRhqFHM).
-- There were already some excellent works on topics such as **Transformer**, **Self-Attention Mechanism**, **Neural Network**, **Deep Learning**, etc. from last year's event, the [**SoME1**](https://www.3blue1brown.com/blog/some1-results#all-entries). Here are some examples:
+- There were already some excellent works on topics such as **Transformer**, **Self-Attention Mechanism**, **Neural Network**, **Deep Learning**, etc. from last year's event, the [**SoME1**](https://www.3blue1brown.com/blog/some1-results#all-entries) as well. Here are some examples:
   - [Attention mechanism - An In-depth Analysis and Walkthrough](https://shaunaksen.hashnode.dev/attention-mechanism-an-in-depth-analysis-and-walkthrough-part-1), is a detailed, computer-science-style tutorial with mathematical formulas and 2D animations.
   - [From Recurrent Neural Network (RNN) to Attention explained intuitively](https://medium.com/@cakraww/from-recurrent-neural-network-rnn-to-attention-explained-intuitively-7fd7caeef6af) uses 2D animations to illustrate the development and connection from recurrent neural network (RNN) to attention mechanism.
   - [The Attention Mechanism Demystified](https://mehta-rohan.com/writings/blog_posts/attention.html)(the [original url](https://mehta-rohan.com/#/blog-posts/intuitive_attention_via_the_transformer) listed by **3b1b** is no longer valid, but similar work found from the content creator's personal website) explains the attention mechanism with beautiful 2D pictures.
-  - [Convolutional Neural Networks Explained (CNN Visualized)](https://www.youtube.com/watch?v=pj9-rr1wDhM&list=PLnQX-jgAF5pTkwtUuVpqS5tuWmJ-6ZM-Z&index=531) explains the working principle of the feedforward neural network(FFN) and the convolutional neural network(CNN) through a very cool animation. I believe you will be amazed by the beauty and quality of this work as much as I am!
+  - [Convolutional Neural Networks Explained (CNN Visualized)](https://www.youtube.com/watch?v=pj9-rr1wDhM&list=PLnQX-jgAF5pTkwtUuVpqS5tuWmJ-6ZM-Z&index=531) explains the working principle of the feedforward neural network(FFN) and the convolutional neural network(CNN) through a series of very cool animations. I believe you will be amazed by the beauty and quality of this work as much as I am!
 - From my experience in using Transformer-related models, even with the above-mentioned high-quality explanations, I still cannot confidently say that I fully understand the computation process of Transformer. The reason may be because of the **granularity** of the explanation (such as The Annotated Transformer does not further decompose the computation process of the attention mechanism) and the **precision** of the response to the code (for example The Illustrated Transformer has simplified explanations through a large number of cartoon pictures, but there is no response to the code implementation), the similar situation applies to those wonderful works related to Tranformer from [**SoME1**](https://www.3blue1brown.com/blog/some1-results#all-entries), the current explanation blog posts, videos, etc. are still insufficient in my opinion.
 
 - Based on the above status quo, I think it is necessary to launch an explanation fashion with a finer **granularity** of the explanation of the computation process and a higher **precision** in response to the code. Specifically, it is the **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** supporting this blog.
@@ -146,7 +146,7 @@ torch.Size([8, 16])
 > ##### Self-attention
 
 - For self-attention mechanism, the goal is to compute the **context vectors** $\boldsymbol{z}^{(i)}=\sum_{j=1}^{T} \alpha_{i j} \boldsymbol{x}^{(j)}$, which involve **attention weights matrix** $\alpha_{i j}$.
-- In turn, the **attention weights matrix** $\alpha_{i j}$ involve the **$\omega_{i j}$ matrix**:
+- In turn, the **attention weights matrix** $\alpha_{i j}$ involves the **$\omega_{i j}$ matrix**:
 
 $$\omega_{i j}=\boldsymbol{x}^{(i)^{\top}} \boldsymbol{x}^{(j)}$$
 
@@ -221,7 +221,7 @@ torch.argmax(attention_weights, dim=0)
 tensor([0, 1, 2, 3, 4, 5, 6, 7])
 ```
 
-- It can be seen that the index of the maximum value is the same as that of both the row and column, which means that the value on the **diagonal** of the attention weight matrix $\alpha_{i j}$ is the largest. From the above gif, the color of each small cube on the **diagonal** also confirms this point.
+- It can be seen that the index of the maximum value is the same as that of both the row and column, which means that the value on the **diagonal** of the attention weight matrix $\alpha_{i j}$ is the largest. From the above gif, the color of each small cube on the **diagonal** confirms this point as well.
 
 - Now we have the attention weight matrix $\alpha_{i j}$, we can compute the context vector for each word $\boldsymbol{z}^{(i)}=\sum_{j=1}^{T} \alpha_{i j} \boldsymbol{x}^{(j)}$
 
@@ -398,7 +398,7 @@ torch.Size([8, 8])
 - Note that **scaling** $\omega_{ij}$ by the **factor** $1/\sqrt{m}$, where typically $m = d_k$, ensures that the Euclidean length of the **weight
 vectors** (row vectors in attention weights) will be approximately in the same range.
 
-- Let's take a closer look at the **11th scene**. Smart as you are, you must have found out the difference by comparing it with the **4th scene**. We get different attention weight matrices, which is the meaning of adding parameters —— let the model **learn more**!
+- Let's take a closer look at the **11th scene**. Smart as you are, you must have found out the difference by comparing it with the **4th scene**. We get a different attention weight matrice, which is the meaning of adding parameters —— let the model **learn more**!
 
 ![scene_11](pics/scene_11.png)
 
@@ -495,9 +495,9 @@ print(multihead_queries.size())
 torch.Size([9, 17, 8])
 ```
 
-- Some readers may have questions here: how the dot product takes place between the two tensors multihead_U_query and embedded_sentence.T whose dimensions **do not match**? To give a quick answer, here PyTorch automatically completes the computation of **broadcasting** and **tensor multiplication** for us. For details, please refer to [TORCH.MATMUL](https://pytorch.org/docs/stable/generated/torch.matmul.html), [BROADCASTING SEMANTICS](https://pytorch.org/docs/stable/notes/broadcasting.html), and [Broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html).
+- Some readers may have questions here: how could the dot product take place between the two tensors multihead_U_query and embedded_sentence.T whose dimensions **do not match**? To give a quick answer, here PyTorch automatically completes the operation of **broadcasting** and **tensor multiplication** for us. For details, please refer to [TORCH.MATMUL](https://pytorch.org/docs/stable/generated/torch.matmul.html), [BROADCASTING SEMANTICS](https://pytorch.org/docs/stable/notes/broadcasting.html), and [Broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html).
 
-- In this case, the first dimension of the multihead_U_query tensor, that is, the dimension of the **number of heads** is regarded as the **number of batches**, does not participate in the subsequent dot product operation. And the embedded_sentence.T matrix, when multiplied with the former, needs to be **broadcasted** along the first dimension of the multihead_U_query tensor, in other words, by **copying itself h-1 times**, so that both tensors get matched in all dimensions. Now, for both tensors, the first dimension, the number of heads, is regarded as the batch, and the dot product can now take place in our familiar way between each pair of matrices from those two tensors in each batch.
+- In this case, the first dimension of the multihead_U_query tensor, that is, the dimension of the **number of heads** is regarded as the **number of batches**, does not participate in the subsequent dot product operation. And the embedded_sentence.T matrix, when multiplied with the former, needs to be **broadcasted** along the first dimension of the multihead_U_query tensor, in other words, by **copying itself h-1 times**, so that both tensors get matched in all dimensions. Now, for both tensors, the first dimension, the number of heads, is regarded as the batch, and the dot product can now take place in our familiar way by each pair of matrices from each batch.
 
 - We adjust the dimension orders of the Q tensor in order to facilitate the subsequent computation of the $\omega$ tensor:
 
@@ -524,7 +524,6 @@ torch.Size([9, 17, 8])
 ```
 
 ```python
-
 multihead_values = multihead_U_value.matmul(embedded_sentence.T)
 
 print(multihead_values.size())
@@ -534,7 +533,7 @@ print(multihead_values.size())
 torch.Size([9, 18, 8])
 ```
 
-- The above computation process can be vividly shown in the **14th, 15th, and 16th scenes**, and we can also see more clearly how the **broadcasting mechanism** replicates the embedded_sentence.T matrix along the direction of the multi-head!
+- The above computation process can be vividly shown in the **14th, 15th, and 16th scenes**, and we can also see more clearly how the embedded_sentence.T matrix replicates itself along the direction of the multi-head by the **broadcasting mechanism**!
 
 ![scene_14_15_16](pics/scene_14_15_16.gif)
 
@@ -658,18 +657,18 @@ torch.Size([8, 18])
 
 > #### Rethink and Future Work
 
-- This blog uses **a total of 21 scenes** to visualize the computation process of the self-attention mechanism in Transformer, with a 3D interactive fashion for readers to **explore by themselves**. By making the above 3D interactive website and writing this blog, I have had a clearer understanding of the computation process of the attention mechanism in Transformer.
+- This blog uses **a total of 21 scenes** to visualize the computation process of the self-attention mechanism in Transformer, with a 3D interactive fashion for readers to **explore by themselves**. By making the above 3D interactive website and writing this blog, I have had a clearer understanding of the computation process of the attention mechanism in Transformer myself as well.
 
-- Different from the previous schematic diagrams or simple 2D pictures, all the scenes in the above 3D interactive website, and the colors in each small cube are generated through strict code rules, and are strictly in accordance with the implementation of Transformer architecture, and can be regarded as a **3D interactive implementation** of the attention mechanism computation process in Transformer.
+- Different from the previous schematic diagrams or simple 2D pictures, all the scenes in the above 3D interactive website, and the colors in each small cube are generated through strict code rules, and are strictly in accordance with the implementation of Transformer architecture, and thus can be regarded as a **3D interactive implementation** of the attention mechanism computation process in Transformer.
 
-- The seperation of multiple scenes will help readers to make a **horizontal comparison** of the above computation process, so as to generate new insights for further in-depth studies. Here are a few examples:
+- The seperation of multiple scenes will help readers to make a set of **comparative studies** of the above computation process, so as to generate new insights for further in-depth exploration. Here are a few examples:
   - Comparing the resulting **$\omega$ matrix / tensor**: the 3rd, 10th, 17th scenes
   - Comparing the resulting **attention weight matrix / tensor**: the 4th, 11th, 18th scenes
   - Comparing the resulting **context vector matrix / tensor**: the 5th, 12th, 19th scenes
 
-- The popularity of deep learning in recent years is not accidental, but the rationale behind it has always been a hot topic for people to explore, such as **explainable AI (XAI)** that has emerged in recent years. Apart from being driven by our desire to explore the unknown world, AI's **robustness**, **fairness**, and **security** are increasingly being paid attention to in our society. **Visualization** as a means of conveying ideas has a natural advantage in **intuition** and is often the source of innovation. I believe the method proposed in this blog is inspiring and instructive for further exploration of the principles behind AI.
+- The popularity of deep learning in recent years is not accidental, but the rationale behind it has always been a hot topic, such as **explainable AI (XAI)** that has emerged in recent years. Apart from being driven by our desire to explore the unknown world, AI's **robustness**, **fairness**, and **security** are increasingly being paid attention to in our society. **Visualization** as a means of conveying ideas has a natural advantage in **intuition** and is often the igniter of innovation. I believe the method proposed in this blog is inspiring and instructive for further exploration of the mathematical principles of AI.
 
-- The computation process of the attention mechanism in Transformer introduced in this blog is only a small part of the forward propagation process, and it does not even discuss the **iterative process** involved in forward propagation. In addition, the Transformer's characteristic **positional encoding algorithm**, the **back-propagation** process, the **loss function**, the **optimizer**, and the **evaluation method** of the model performance are all aspects that are worth visualizing. I believe that if there are more abundant visualization works, it will produce more **comparative studies**, and will also generate more research directions, which are all worthy of continued in-depth work.
+- The computation process of the attention mechanism in Transformer introduced in this blog is only a small part of the forward propagation process, and it does not even discuss the **iterative process** involved in it. In addition, the Transformer's characteristic **positional encoding algorithm**, the **backward propagation** process, the **loss function**, the **optimizer**, and the **evaluation method** of the model performance are all aspects that are worth visualizing. I believe that if there are more abundant visualization works, it will produce more **comparative studies**, and will also generate more research directions, which are all worthy of continued in-depth work.
 
 > #### References
 
