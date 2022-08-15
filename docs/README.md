@@ -23,26 +23,26 @@
 - The following is a brief introduction to the use and operation of the **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** (the specific meaning of its content will be explained in detail later on): 
   - You will be directed to the **1st scene** by default when you visit the website for the first time. The upper right corner is the **control panel**, which can be **opened/closed** by yourself. The control panel includes **adding/deleting the light source**, **adding/deleting grid lines**, **adding/deleting axes**, **adding/deleting shadows**, and **scene switching drop-down menu**. The upper left corner is the **frame rate information** of the current page.
 
-  ![note_first_sight](pics/note_first_sight.png)
+  ![note_first_sight](pics/note_first_sight.webp)
 
   - Take the **1st scene** as an example, right-click any position and drag it to **pan** the current view.
 
-  ![note_pan_the_view](pics/note_pan_the_view.png)
+  ![note_pan_the_view](pics/note_pan_the_view.webp)
 
   - Move the mouse scroll wheel down or up to **zoom in or out** of the current view.
 
-  ![note_zoom](pics/note_zoom.png)
+  ![note_zoom](pics/note_zoom.webp)
 
   - Left-click and drag any position to **rotate** the view. Combined with the above **panning** and **zooming** operations, you can achieve 360° viewing at any angle in the scene.
 
-  ![note_rotation](pics/note_rotation.png)
+  ![note_rotation](pics/note_rotation.webp)
 
 
 
 > #### Introduction
 - **Transformer** (Vaswani, A. et al. 2017) has swept all corners of the AI ​​fields since it was proposed in 2017, from the original natural language processing (**NLP**) (original Transformer (Vaswani, A. et al. 2017), **ELMo** series (Matthew E. . et al. 2018), **GPT** series (Brown, T. et al. 2020), **BERT** series (Devlin, J. et al. 2018)) to image and video understanding (**ViT** (Dosovitskiy, A. et al. 2020) ), to biological sequence analysis (Rives, A. et al. 2021, Nambiar, A. et al. 2020, Rao, R. et al. 2019), to protein structure prediction (**AlphaFold2** (Jumper, J. et al. 2021) published on **Nature**, also the last year’s great breakthrough in scientific researches, [**2021 BREAKTHROUGH OF THE YEAR**](https://www.science.org/content/article/breakthrough-2021)) and so on. **Transformer is now everywhere.** The original paper (**Attention is all you need**) has reached the number of citations in Google Scholar an astonishing 48,914 times (2022-08-09 at the time of writing V1.0 of this blog)!
 
-![transformer_citation_counts](pics/transformer_citation_counts.png)
+![transformer_citation_counts](pics/transformer_citation_counts.webp)
 
 - "...if now going to the machine learning the part that's surprising is... so we like architectures like neural networks, and I would say this was a very rapidly evolving field until the **Transformer** came, so **attention might indeed be all you need** which is the title, also a good title although in hindsight is good I don't think at the time I thought this is a great title for a paper, but that architecture is proving that the dream of modeling sequences of any bytes, there is something there that will stick, and I think these advances in architectures, in kind of how neural networks and architectures to do what they do, um it's been hard to find one that has been so **stable** and relatively has **changed very little** since it was invented five or so years ago, so that is a **surprise** that keeps recurring into all the projects..." —— quotes from **Oriol Vinyals**, the Research Director and Deep Learning Lead at DeepMind, [Oriol Vinyals: Deep Learning and Artificial General Intelligence | Lex Fridman Podcast #306](https://www.youtube.com/watch?v=aGBLRlLe7X8)
 
@@ -102,7 +102,7 @@ tensor([0, 7, 1, 2, 5, 6, 4, 3])
 
 - It can be seen vividly from the **1st scene**:
 
-![scene_1](pics/scene_1.png)
+![scene_1](pics/scene_1.webp)
 
 - The different colors of each small cube in all scenes represent different **numerical values**. The **relative relationship** between them can be seen from the 🌈colormap gradient on the right, that is to say, the closer to the <strong><font color="#FF0000">red</font></strong> end, the larger the value, and the closer to the <strong><font color="#7F00FF">purple</font></strong> end, the smaller the value.
 
@@ -136,7 +136,7 @@ torch.Size([8, 16])
 
 - In the **2nd scene**, we can see that each word is mapped into a 16-dimensional word embedding.
 
-![scene_2](pics/scene_2.png)
+![scene_2](pics/scene_2.webp)
 
 - One thing to note here is that although the color of each small cube represents its numerical value, the **relative size** of each numerical value is **restricted** to the vector, matrix, or tensor where the cube locates. In other words, the colors of cubes from two different vectors, matrices, or tensors do not reflect the numerical relativity between those two cubes.
 
@@ -164,7 +164,7 @@ torch.Size([8, 8])
 
 - This is also what the **3rd scene** shows:
 
-![scene_3](pics/scene_3.png)
+![scene_3](pics/scene_3.webp)
 
 - Next, we get the **attention weight matrix** by normalizing the **$\omega$ matrix** **along the last dimension** (the sum of the values ​​along the last dimension is 1):
 
@@ -184,7 +184,7 @@ torch.Size([8, 8])
 
 - We can also clearly see the direction along which the **normalization** operation is taking through the **4th scene**:
 
-![scene_4](pics/scene_4.png)
+![scene_4](pics/scene_4.webp)
 
 - The meaning of the row and column of the attention weight matrix $\alpha_{i j}$:
   - row: each input(word)
@@ -246,7 +246,7 @@ torch.Size([8, 16])
 
 - This is exactly what the **5th scene** shows:
 
-![scene_5](pics/scene_5.png)
+![scene_5](pics/scene_5.webp)
 
 > ##### Scaled dot product
 
@@ -316,7 +316,7 @@ torch.Size([18, 16])
 
 - We show the above 3 **mapping matrices** in the **6th scene**:
 
-![scene_6](pics/scene_6.png)
+![scene_6](pics/scene_6.webp)
 
 - Next, let us compute the **Q, K, and V matrices** by mapping operations separately:
 
@@ -360,7 +360,7 @@ torch.Size([8, 18])
 
 - The computation process of the above **Q, K, and V matrices** is reflected in the **7th, 8th, and 9th scenes** respectively:
 
-![scene_7_8_9](pics/scene_7_8_9.png)
+![scene_7_8_9](pics/scene_7_8_9.webp)
 
 - In the previous section, the most simplified version of the self-attention mechanism, we computed the **unnormalized weights $\omega_{ij}$**, as the pairwise dot product between the given input sequence element, $x^{(i)}$, and the $j$th sequence element, $x^{(j)}$. Now, in this parameterized version of self-attention, we compute $\omega_{ij}$ as the dot product between the query and key:
 
@@ -381,7 +381,7 @@ torch.Size([8, 8])
 
 - This is what the **10th scene** shows. By comparing it with the **3rd scene** above, you can find how the computation of the $\omega_{ij}$ matrix differs from not adding the parameters:
 
-![scene_10](pics/scene_10.png)
+![scene_10](pics/scene_10.webp)
 
 - Likewise, we get the **attention weight matrix** by normalizing $\omega_{ij}$ along its last dimension:
 
@@ -400,7 +400,7 @@ vectors** (row vectors in attention weights) will be approximately in the same r
 
 - Let's take a closer look at the **11th scene**. Smart as you are, you must have found out the difference by comparing it with the **4th scene**. We get a different attention weight matrice, which is the meaning of adding parameters —— let the model **learn more**!
 
-![scene_11](pics/scene_11.png)
+![scene_11](pics/scene_11.webp)
 
 - Finally, the output is a **weighted average** of **value** sequences: $z^{(i)} = \Sigma_{j=1}^T \alpha_{ij} v^{j}$, which can be implemented as follows:
 
@@ -416,7 +416,7 @@ torch.Size([8, 18])
 
 - You can see how ​​different our new context vector matrix is by comparing the **12th scene** with the **5th one** above!
 
-![scene_12](pics/scene_12.png)
+![scene_12](pics/scene_12.webp)
 
 
 > ##### Multi-head Attention
@@ -481,7 +481,7 @@ torch.Size([9, 18, 16])
 
 - By combining the **rotation**, **panning**, and **zooming** operations, we can see the number and direction of the **multi-heads** in the **13th scene**:
 
-![scene_13](pics/scene_13.png)
+![scene_13](pics/scene_13.webp)
 
 - Next, let's compute the multi-head **Q, K, V tensors**:
 
@@ -535,7 +535,7 @@ torch.Size([9, 18, 8])
 
 - The above computation process can be vividly shown in the **14th, 15th, and 16th scenes**, and we can also see more clearly how the embedded_sentence.T matrix replicates itself along the direction of the multi-head by the **broadcasting mechanism**!
 
-![scene_14_15_16](pics/scene_14_15_16.png)
+![scene_14_15_16](pics/scene_14_15_16.webp)
 
 - In this code, we now have the **Q, K, V tensors** that refer to the **nine attention heads** in their first dimension. The second and third dimensions refer to the **embedding size (after mapping operation)** and the **number of words**, respectively. 
 
@@ -565,7 +565,7 @@ torch.Size([9, 8, 8])
 
 - In the **17th scene**, by comparing it with the **10th scene** above, we find that each head learned something different!
 
-![scene_17](pics/scene_17.png)
+![scene_17](pics/scene_17.webp)
 
 - Likewise, by normalizing the $\omega$ tensor along its last dimension, we get the attention weight tensor for the multi-head version:
 
@@ -581,7 +581,7 @@ torch.Size([9, 8, 8])
 
 - Let's take a look at **what each head has learned** in the **18th scene**!
 
-![scene_18](pics/scene_18.png)
+![scene_18](pics/scene_18.webp)
 
 - Similarly, by computing the dot product of the attention weight tensor and the V tensor, we get the multi-head context vector tensor:
 
@@ -597,7 +597,7 @@ torch.Size([9, 8, 18])
 
 - The resulting different context vector matrices for each head can be seen in the **19th scene**:
 
-![scene_19](pics/scene_19.png)
+![scene_19](pics/scene_19.webp)
 
 - Let's swap the first two dimensions of the resulting multi-head context vector tensor to facilitate subsequent merging operations on multi-heads:
 
@@ -625,7 +625,7 @@ torch.Size([8, 162])
 
 - At this point we get a word embedding matrix with 8 rows and each of which has 162 dimensions (**the 20th scene**):
 
-![scene_20](pics/scene_20.png)
+![scene_20](pics/scene_20.webp)
 
 - We also need to map this merged context vector matrix back to the size of d_v, so we initialize a **linear map** first:
 
@@ -653,7 +653,7 @@ torch.Size([8, 18])
 
 - In the **21st scene**, we can see that the dimension sizes of the context vector matrix are now consistent with the context vector matrix (shown in the **12th scene**) computed in the previous section:
 
-![scene_21](pics/scene_21.png)
+![scene_21](pics/scene_21.webp)
 
 > #### Rethink and Future Work
 
