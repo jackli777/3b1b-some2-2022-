@@ -8,7 +8,7 @@
 
 > #### Version Info
 - V1.0 2022-08-09 work submitted to **3Blue1Brown**'s **Summer of Math Exposition 2**
-- V1.1 2022-08-12 change the heat map gradient to 🌈colormap gradient ranging from <strong><font color="#7F00FF">purple</font></strong> to <font color="#FF0000">red</font></strong>, and update the accompanying **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** correspondingly, and all the pngs, gifs in this blog.
+- V1.1 2022-08-12 change the heat map gradient to 🌈colormap gradient ranging from <strong><font color="#7F00FF">purple</font></strong> to <font color="#FF0000">red</font></strong>, and update the accompanying **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** correspondingly, and all the pictures in this blog.
 
 > #### Notes
 
@@ -23,19 +23,19 @@
 - The following is a brief introduction to the use and operation of the **[3D interactive website](https://jackli777.github.io/visualizing-ai/)** (the specific meaning of its content will be explained in detail later on): 
   - You will be directed to the **1st scene** by default when you visit the website for the first time. The upper right corner is the **control panel**, which can be **opened/closed** by yourself. The control panel includes **adding/deleting the light source**, **adding/deleting grid lines**, **adding/deleting axes**, **adding/deleting shadows**, and **scene switching drop-down menu**. The upper left corner is the **frame rate information** of the current page.
 
-  ![note_first_sight](pics/note_first_sight.gif)
+  ![note_first_sight](pics/note_first_sight.png)
 
   - Take the **1st scene** as an example, right-click any position and drag it to **pan** the current view.
 
-  ![note_pan_the_view](pics/note_pan_the_view.gif)
+  ![note_pan_the_view](pics/note_pan_the_view.png)
 
   - Move the mouse scroll wheel down or up to **zoom in or out** of the current view.
 
-  ![note_zoom](pics/note_zoom.gif)
+  ![note_zoom](pics/note_zoom.png)
 
   - Left-click and drag any position to **rotate** the view. Combined with the above **panning** and **zooming** operations, you can achieve 360° viewing at any angle in the scene.
 
-  ![note_rotation](pics/note_rotation.gif)
+  ![note_rotation](pics/note_rotation.png)
 
 
 
@@ -184,7 +184,7 @@ torch.Size([8, 8])
 
 - We can also clearly see the direction along which the **normalization** operation is taking through the **4th scene**:
 
-![scene_4](pics/scene_4.gif)
+![scene_4](pics/scene_4.png)
 
 - The meaning of the row and column of the attention weight matrix $\alpha_{i j}$:
   - row: each input(word)
@@ -221,7 +221,7 @@ torch.argmax(attention_weights, dim=0)
 tensor([0, 1, 2, 3, 4, 5, 6, 7])
 ```
 
-- It can be seen that the index of the maximum value is the same as that of both the row and column, which means that the value on the **diagonal** of the attention weight matrix $\alpha_{i j}$ is the largest. From the above gif, the color of each small cube on the **diagonal** confirms this point as well.
+- It can be seen that the index of the maximum value is the same as that of both the row and column, which means that the value on the **diagonal** of the attention weight matrix $\alpha_{i j}$ is the largest. From the above picture, the color of each small cube on the **diagonal** confirms this point as well.
 
 - Now we have the attention weight matrix $\alpha_{i j}$, we can compute the context vector for each word $\boldsymbol{z}^{(i)}=\sum_{j=1}^{T} \alpha_{i j} \boldsymbol{x}^{(j)}$
 
@@ -481,7 +481,7 @@ torch.Size([9, 18, 16])
 
 - By combining the **rotation**, **panning**, and **zooming** operations, we can see the number and direction of the **multi-heads** in the **13th scene**:
 
-![scene_13](pics/scene_13.gif)
+![scene_13](pics/scene_13.png)
 
 - Next, let's compute the multi-head **Q, K, V tensors**:
 
@@ -535,7 +535,7 @@ torch.Size([9, 18, 8])
 
 - The above computation process can be vividly shown in the **14th, 15th, and 16th scenes**, and we can also see more clearly how the embedded_sentence.T matrix replicates itself along the direction of the multi-head by the **broadcasting mechanism**!
 
-![scene_14_15_16](pics/scene_14_15_16.gif)
+![scene_14_15_16](pics/scene_14_15_16.png)
 
 - In this code, we now have the **Q, K, V tensors** that refer to the **nine attention heads** in their first dimension. The second and third dimensions refer to the **embedding size (after mapping operation)** and the **number of words**, respectively. 
 
@@ -565,7 +565,7 @@ torch.Size([9, 8, 8])
 
 - In the **17th scene**, by comparing it with the **10th scene** above, we find that each head learned something different!
 
-![scene_17](pics/scene_17.gif)
+![scene_17](pics/scene_17.png)
 
 - Likewise, by normalizing the $\omega$ tensor along its last dimension, we get the attention weight tensor for the multi-head version:
 
