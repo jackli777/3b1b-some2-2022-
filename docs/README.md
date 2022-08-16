@@ -106,7 +106,7 @@ tensor([0, 7, 1, 2, 5, 6, 4, 3])
 
 - The different colors of each small cube in all scenes represent different **numerical values**. The **relative relationship** between them can be seen from the 🌈colormap gradient on the right, that is to say, the closer to the <strong><font color="#FF0000">red</font></strong> end, the larger the value, and the closer to the <strong><font color="#7F00FF">purple</font></strong> end, the smaller the value.
 
-- In the **1st scene**, the different colors of the cubes represent the **index** of each word in the dictionary.
+- In the **1st scene**, the different colors of the cubes represent the **indices** of each word in the dictionary.
 
 - Next, we initialize a **word embedding** mapping matrix, i.e. each word is represented as a real vector. Since the sentence has 8 words, there will be 8 vectors, each of which is 16-dimensional (the dimension of the **word embedding**):
 
@@ -221,7 +221,7 @@ torch.argmax(attention_weights, dim=0)
 tensor([0, 1, 2, 3, 4, 5, 6, 7])
 ```
 
-- It can be seen that the index of the maximum value is the same as that of both the row and column, which means that the value on the **diagonal** of the attention weight matrix $\alpha_{i j}$ is the largest. From the above picture, the color of each small cube on the **diagonal** confirms this point as well.
+- It can be seen that the indices of the maximum value along each dimension are the same as those of both the row and column, which means that the value on the **diagonal** of the attention weight matrix $\alpha_{i j}$ is the largest. From the above picture, the color of each small cube on the **diagonal** confirms this point as well.
 
 - Now we have the attention weight matrix $\alpha_{i j}$, we can compute the context vector for each word $\boldsymbol{z}^{(i)}=\sum_{j=1}^{T} \alpha_{i j} \boldsymbol{x}^{(j)}$
 
