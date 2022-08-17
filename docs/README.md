@@ -699,4 +699,4 @@ Li, Jingkai (2022). Visualizing Transformer [Blog post]. Retrieved from https://
 
 > #### Acknowledgements
 
-- Special thanks go to my friend **Yuan, Awen** who did great proof-reading work to polish this blog post ^_^
+- Special thanks go to my friend [**Awen**](https://www.linkedin.com/in/awen-yuan-15a961139) who did great proofreading work to polish this blog post ^_^
