@@ -691,7 +691,7 @@ torch.Size([8, 18])
 
 > #### Citation Info
 
-- If you have any questions or suggestions, please contact me through the above email addresses.
+- If you have any questions or suggestions, please contact me through the above email addresses. Please also drop your words on [GitHub Discussions](https://github.com/jackli777/3b1b-some2-2022-/discussions) if you have any feedback. Thank you!
 
 - If this blog is helpful to your work, please cite it. The suggested way is as follows:
 
